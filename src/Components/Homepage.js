@@ -36,9 +36,9 @@ export default function Homepage() {
   if(count<1){
    setCount(150);
   }
-  if(count>149){
-    setCount(count-1);
-   }
+  // if(count>149){
+  //   setCount(count-1);
+  //  }
 }
 
 function arttir(){
@@ -48,26 +48,28 @@ function arttir(){
     setCount(0);
    }
 }
+console.log(pokeName)
     return (
        
-      <div className="nes-container with-title is-centered" style={{marginTop:50,marginLeft:750,marginRight:750}}>
+      <div className="nes-container with-title is-centered" 
+      style={{marginTop:50,marginLeft:600,marginRight:600}}>
         <p className="title">POKEDEX</p>
         <p>{count+1}</p>
 
         <p>{pokeName}</p>
-        
         <p>
           <img 
         src={pokePic}
         alt={pokeName}
+        height="200px"
           />
       </p>
-        {/* <p>{poke.name}</p>
-        
-        <p><img 
-      src={poke.url}
-      alt={poke.name}
-      /></p> */}
+
+      {/* <a>
+        <p>{poke.name}</p>
+        <img src={poke.url} alt={poke.name}></img>
+      </a> */}
+
         <button type="button" className="nes-btn is-primary" style={{marginRight:20,width:100}} onClick={()=>azalt()}>Previous</button>
         <button type="button" className="nes-btn is-primary" style={{marginRight:20,width:100}} onClick={()=>arttir()}>Next</button>
       </div>
